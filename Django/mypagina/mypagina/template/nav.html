@@ -1,0 +1,57 @@
+{% include 'estilo.html' %}
+{% load static %}
+
+<header>
+       
+    <div  >
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black; padding: 0; margin: 0;" >
+            <div class="container">
+                <a href="" class="navbar-brand">
+                    <img src="{% static 'img/logo.png' %}" style="height: 150px; width: auto; border-radius: 15rem 15rem 15rem 15rem;" alt="">
+                
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="collapse navbar-collapse" id="navbarCollapse">
+                    <li class="navbar-nav">
+                        <a href="/" class="nav-item nav-link active" style="color: rgb(238, 200, 12); font-size: 20; text-transform: lowercase;">Nosotros</a>
+                        
+                    </li>
+                    <li class="navbar-nav">
+                        <a href="/" class="nav-item nav-link active" style="color: rgb(241, 234, 234); font-size: 20; text-transform: lowercase;">Tienda</a>
+                        
+                    </li>
+                    <li class="navbar-nav">
+                            
+                        <a class="nav-item nav-link" href="" style="color: rgb(247, 243, 243); font-size: 20;">Categoria</a>
+                    </li>
+                    
+                    {% if user.is_authenticated %}
+                        <li class="navbar-nav">
+                            
+                            <a class="nav-item nav-link" href="" style="color: rgb(247, 243, 243); font-size: 20;">Categoria</a>
+                        </li>
+                        <li class="navbar-nav ms-auto">
+                            <a class="nav-item nav-link" href="">
+                            
+                                <img src="" style="width: 60px; height: 50px;">
+                            </a>
+                        </li>
+                        <li class="navbar-nav ms-auto">
+                            <a href="" class="nav-item nav-link" style="color: rgb(239, 236, 236); font-size: 20px;">Cerrar</a>
+                        </li>
+                    </ul>
+                    
+                    {% else %} 
+                        <div class="navbar-nav ms-auto">
+                            <button class="btn btn-outline-ligth me-2" style="color: #b0d2ea;">Ingresar</button>
+                            <button class=" btn btn-warning">Registrarse</button>
+                        </div>
+        
+                    {% endif %}
+                    
+            </div>
+        </nav>
+    </div>
+</header>

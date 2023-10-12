@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div id="conteItemCarrusel"
+    style="
+        height: 400px;
+        overflow: hidden ;">
+    <div class="itemCarrusel" 
+        id="itemCarrusel-1"
+        style="border: 1px solid black;
+        height:100%;
+        position: relative;">
+        <div class="tarjetaCarrusel" 
+            id="tarjetaCarrusel-1"
+            style="height: 100%;">
+            <img src="{% static 'img/1.jpg' %}" alt="" style="width: 100%; height: 100%;">
+            
+
+        </div>
+        <div class="flechaCarrusel" 
+        style="position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;">
+            <a href="#itemCarrusel-3" style="text-decoration: none;font-size: 3rem;">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a href="#itemCarrusel-2" style="text-decoration: none;font-size: 3rem;">
+                <i class="fa fa-chevron-right"></i>
+
+            </a>
+        </div>
+
+    </div>
+    <div class="itemCarrusel" 
+        id="itemCarrusel-2"
+        style="border: 1px solid black;
+        height:100%;
+        position: relative;">
+        <div class="tarjetaCarrusel"
+            id="tarjetaCarrusel-2" 
+            style="height: 100%;">
+            <img src="{% static 'img/2.jpg' %}" alt="" style="width: 100%; height: 120%;">
+            B
+
+        </div>
+        <div class="flechaCarrusel" 
+        style="position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;">
+        <a href="#itemCarrusel-1" style="text-decoration: none;font-size: 3rem;">
+            <i class="fa fa-chevron-left"></i>
+            </a>
+        <a href="#itemCarrusel-3" style="text-decoration: none;font-size: 3rem;">
+            <i class="fa fa-chevron-right"></i>
+
+        </a>
+        </div>
+
+    </div>
+    <div class="itemCarrusel" 
+        id="itemCarrusel-3"
+        
+        style="border: 1px solid black;
+        height:250px;
+        position: relative;">
+        <div class="tarjetaCarrusel"
+        id="tarjetaCarrusel-3" 
+        style="height:100%">
+            <img src="{% static 'img/3.jpg' %}" alt="" style="width: 100%; height: 180%;">
+        </div>
+        <div class="flechaCarrusel" 
+        style="position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;">
+        <a href="#itemCarrusel-2" style="text-decoration: none;font-size: 3rem;">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a href="#itemCarrusel-1" style="text-decoration: none;font-size: 3rem;">
+            <i class="fa fa-chevron-right"></i>
+
+        </a>
+        </div>
+        
+
+    </div>
+    
+
+</div>
+  
+
+<div id="puntosCarrusel"
+    style="display: flex;
+    justify-content: space-around;">
+    <a  href="#itemCarrusel-1" style="font-size: 2rem; text-decoration: none;">*</a>
+    <a href="#itemCarrusel-2" style="font-size: 2rem; text-decoration: none;">*</a>
+    <a href="#itemCarrusel-3" style="font-size: 2rem; text-decoration: none;">*</a>
+</div> 
+<div class="container" style="display:flex; margin-top: 0; padding: 1rem; width:fit-content;">
+  <form action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" style="display: inline-flex;">
+    <input class="form-control form-control-dark " placeholder="Buscar">
+    <button class=" btn btn-warning">Buscar</button>
+</form>
+</div>
+
+<!--
+<div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'img/fondo.jpg' %}" class="img-fluid rounded-start" alt="..." style="height: 100%; width: 100%;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div> -->
+<div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'img/fondo.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'img/fondo.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'img/fondo.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'img/fondo.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+    
+{% endblock %}

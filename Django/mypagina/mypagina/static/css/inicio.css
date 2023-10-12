@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.itemCarrusel{
+    border: 1px solid rgb(228, 19, 19);
+}
+
+.tarjetaCarrusel{
+    background-color: rgb(149, 189, 20);
+}
+
+.flechaCarrusel{
+
+    background-color: rgb(15, 46, 109);
+}
