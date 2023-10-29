@@ -8,4 +8,6 @@ class Usuario(models.Model):
     apellidoM=models.CharField(max_length=30)
     emaiil=models.EmailField(unique=True)
     UserName = models.CharField(max_length=30)
-    contraseña=models.CharField(max_length=30)
+    contrasena=models.CharField(max_length=30)
+
+    

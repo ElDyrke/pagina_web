@@ -1,78 +1,90 @@
 
 {% include 'estilo.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
 
+<section class="gradient-custom" style="background: linear-gradient(#e66465, #9198e5);">
+    <div class="container py-5" >
+      <div class="card-body p-5 m-4" style="border-radius: 1rem; background: #fff; margin: 5vw 10vw !important;">
+  
+        <div class="text-center mt-md-4 pb-2">
+          
+          <!-- class Usuario(models.Model):
+          nombre = models.CharField(max_length=30)
+          apellidoP=models.CharField(max_length=30)
+          apellidoM=models.CharField(max_length=30)
+          emaiil=models.EmailField(unique=True)-
+          UserName = models.CharField(max_length=30)
+          contrasena=models.CharField(max_length=30) -->
 
-<section class="vh-100 gradient-custom" style="background: linear-gradient(#e66465, #9198e5);">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="" style="border-radius: 1rem; background: #83a7ef;">
-            <div class="card-body p-5 text-center">
-  
-              <div class="mb-md-5 mt-md-4 pb-5">
-                
-  
-                <h2 class="fw-bold mb-2 text-uppercase">Resgistrate</h2>
-                <p class="text-white-50 mb-5">Ingresa tus datos solicitados</p>
-                <form action="/iniciarsesion/" method="POST">
-                    {% csrf_token %}
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="">Nombre</label>
-                        <input type="username" 
-                        name="username" 
-                        autocomplete="current-password" 
-                        required="" 
-                        id="id_username"
-                        class="form-control form-control-lg" 
-                        placeholder="Nombre">
-                  
-                    </div>
-  
-                    <div class="form-group mx-sm-3 mb-2">
-                        <input type="apellico" 
-                        name="password" 
-                        autocomplete="current-password" 
-                        required="" 
-                        id="id_password" class="form-control form-control-lg" 
-                        placeholder="Apellido">
-                    
-                    </div>
-                <div class="form-group mx-sm-3 mb-2">
-                    <input type="apellico" 
-                        name="password" 
-                        autocomplete="current-password" 
-                        required="" 
-                        id="id_password" class="form-control form-control-lg" 
-                        placeholder="Ingrese su correo electronico">
-                </div>
-    
-                <div class="form-group mx-sm-3 mb-2">
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Contraseña</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputPassword4">Confirmar Contraseña</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
-                    </div>
-                  </div>
-            
-                
-  
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">Ingresar</button>
-
-                </form>
-  
-              </div>
-  
-              <div>
-                <p class="mb-0">No tienes una Cuenta? <a href="/ingresar" class="text-white-50 fw-bold">Registrarse</a>
-                </p>
-              </div>
-  
+          <h2 class="fw-bold text-uppercase">Regístrate</h2>
+          <p class="text-black-50 mb-4">Ingresa tus datos solicitados</p>
+          <form action="" method="POST">
+              {% csrf_token %}
+            <div class="form-group mx-sm-3 mb-3">
+              <label class="form-label">Ingrese su Nombre:</label>
+              
+              <input type="text" 
+              name="nombre" 
+              autocomplete="current-password" 
+              required="" 
+              id="id_username"
+              class="form-control form-control-lg mb-2" 
+              placeholder="Nombre">
+      
+              <input type="text" 
+              name="apellidoP" 
+              autocomplete="current-password" 
+              required="" 
+              id="id_password" 
+              class="form-control form-control-lg mb-2" 
+              placeholder="Apellido Paterno">
+        
+              <input type="text" 
+              name="apellidoM" 
+              autocomplete="current-password" 
+              required="" 
+              id="id_password" 
+              class="form-control form-control-lg mb-2" 
+              placeholder="Apellido Materno">
             </div>
+
+            <div class="form-group mx-sm-3 mb-3">
+              <label for="id_email" class="form-label">Ingrese su correo electronico:</label>
+              <input type="email" 
+              name="email" 
+              autocomplete="current-password" 
+              required="" 
+              id="id_email" 
+              class="form-control form-control-lg" 
+              placeholder="example@email.com">
+            </div>
+          <div class="form-group mx-sm-3 mb-3">
+              <label for="usrname" class="form-label">Ingrese su nombre de usuario:</label>
+              <input type="text" name="UserName" class="form-control form-control-lg" id="usrname" placeholder="Username">
+            </div>
+          <div class="form-group mx-sm-3 mb-3">
+                <label for="inputPassword4" class="form-label">Ingrese su Contraseña</label>
+                <input type="password" name="contrasena" class="form-control form-control-lg" id="inputPassword4" placeholder="Contraseña">
           </div>
+          <div class="form-group mx-sm-3 mb-4">
+                
+              <label for="inputPassword5" class="form-label">Confirme su Contraseña</label>
+              <input type="password" name="contrasena2" class="form-control form-control-lg" id="inputPassword5" placeholder="Contraseña">
+          </div>
+
+          <button class="btn btn-outline-light btn-lg px-5 py-2" type="submit">Registrarse</button>
+
+          </form>
+
         </div>
+
+        <div>
+          <p class="text-center mb-0">Ya tienes una Cuenta? <a href="{% url 'login' %}" class="text-black-50 fw-bold">Ingresar</a>
+          </p>
+        </div>
+
       </div>
+
     </div>
   </section>

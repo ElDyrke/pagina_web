@@ -1,0 +1,47 @@
+
+{% include 'estilo.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+
+<section class="gradient-custom" style="background: linear-gradient(#e66465, #9198e5);">
+    <div class="container py-5" >
+      <div class="card-body p-5 m-4" style="border-radius: 1rem; background: #fff; margin: 5vw 10vw !important; ">
+  
+        <div class="text-center mt-md-4 pb-2">
+          
+          <!-- class Usuario(models.Model):
+          nombre = models.CharField(max_length=30)
+          apellidoP=models.CharField(max_length=30)
+          apellidoM=models.CharField(max_length=30)
+          emaiil=models.EmailField(unique=True)-
+          UserName = models.CharField(max_length=30)
+          contrasena=models.CharField(max_length=30) -->
+
+          <h2 class="fw-bold text-uppercase">Iniciar Sesión</h2>
+          <p class="text-black-50 mb-4">Ingresa tus datos de inicio</p>
+          <form action="" method="POST">
+              {% csrf_token %}
+            
+          <div class="form-group mx-sm-3 mb-3">
+              <label for="usrname" class="form-label">Nombre de usuario:</label>
+              <input type="text" name="UserName" class="form-control form-control-lg" id="usrname" placeholder="Username">
+            </div>
+          <div class="form-group mx-sm-3 mb-3">
+                <label for="inputPassword4" class="form-label">Contraseña</label>
+                <input type="password" name="contrasena" class="form-control form-control-lg" id="inputPassword4" placeholder="Contraseña">
+          </div>
+
+          <button class="btn btn-outline-light btn-lg px-5 py-2" type="submit">Registrarse</button>
+          </form>
+
+        </div>
+
+        <div>
+          <p class="text-center mb-0">Aún no tienes una Cuenta? <a href="{% url 'form' %}" class="text-black-50 fw-bold">Registrarse</a>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>

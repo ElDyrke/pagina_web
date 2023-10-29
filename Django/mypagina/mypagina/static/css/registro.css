@@ -1,0 +1,17 @@
+*{
+    color: black !important;
+}
+
+h2{
+    font-size: 5vw;
+    margin: 0;
+}
+
+button{
+    border-color: #ccc !important;
+}
+
+.form-group{
+    font-size: 1.2rem !important;
+    text-align: left;
+}
